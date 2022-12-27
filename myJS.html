@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Happy JS for you</title>
+
+    </head>
+
+    <body>
+        <h1><a href="myJs.html">Object</a></h1>
+
+        <h2>Object basic</h2>
+        <ul>
+            <script>
+                var number = {
+                    "one": "first",
+                    "two": "second",
+                };
+                document.write("one: " + number.one + "<br>");
+                document.write("two: " + number.two + "<br>");
+                number.three = "third";
+                document.write("three: " + number.three + "<br>");
+
+                number["NOT four"] = "force";
+                document.write("NOT four: " + number["NOT four"] + "<br>");
+            </script>
+        </ul>
+
+        <h2>Property & Method</h2>
+        <script>
+            number.showAll = function() {
+                for (var key in this) {
+                    document.write(key + ": " + this[key] + "<br>");
+                }
+            }
+            number.showAll();
+        </script>
+
+    </body>
+</html>
